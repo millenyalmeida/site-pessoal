@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Milleny Bertolino</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Efeito de luz -->
+  <div class="iluminacao"></div>
+
+  <header>
+    <h1>Milleny Bertolino de Almeida</h1>
+    <p>Estudante de Front-end, futura Full Stack</p>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <img src="eu.jpg" alt="Foto de perfil de Milleny" class="foto-perfil" />
+    <p>
+      Sou estudante de desenvolvimento front-end, com planos de me tornar uma desenvolvedora full stack.
+      Desde criança, sempre fui curiosa e criativa, o que despertou minha paixão por tecnologia. Atualmente,
+      meu foco é no desenvolvimento web, criando projetos que unam design e funcionalidade. Busco
+      constantemente aprender novas ferramentas e boas práticas. Meu principal objetivo é construir soluções
+      que resolvam problemas reais por meio da tecnologia.
+    </p>
+
+    <h3>Habilidades</h3>
+    <ul class="skills-list">
+ <ul class="skills-list">
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML5</a></li>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS3</a></li>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+</ul>
+
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+
+    <div class="projeto">
+      <h3>Projeto: Android</h3>
+      <p>
+        Este projeto foi desenvolvido com o objetivo de informar os apaixonados por tecnologia sobre a criação
+        do sistema Android — desde os primeiros passos até sua evolução nos dias atuais. Todo o conteúdo foi
+        organizado de forma semântica e estruturada, seguindo as boas práticas de HTML5 e CSS3, garantindo
+        acessibilidade e uma experiência de leitura agradável. O foco foi apresentar a história do Android de
+        maneira clara, com um layout minimalista e moderno. 
+        <a href="https://millenyalmeida.github.io/projetocurso/" target="_blank">ver</a>
+      </p>
+    </div>
+
+    <div class="projeto">
+      <h3>Projeto: Cordel Moderno</h3>
+      <p>
+        Este foi meu projeto mais recente, inspirado na literatura de cordel. A proposta foi criar uma página
+        com um visual estilizado que unisse tradição e tecnologia. Utilizei HTML e CSS para desenvolver uma
+        estrutura limpa, responsiva e com destaque para o efeito de parallax scrolling, que dá profundidade ao
+        conteúdo à medida que o usuário rola a página. Foi um exercício criativo que reforçou meu aprendizado
+        em posicionamento de elementos e efeitos visuais modernos. 
+        <a href="https://millenyalmeida.github.io/projetocurso02/" target="_blank">ver</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="social">
+      <a href="https://www.instagram.com/milleny.almeidaa" target="_blank">Instagram</a>
+      <a href="https://github.com/millenyalmeida" target="_blank">GitHub</a>
+     
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Site Criado por Milleny</p>
+  </footer>
+
+  <!-- Script da luz -->
+  <script>
+    const luz = document.querySelector('.iluminacao');
+
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX + 'px';
+      const y = e.clientY + 'px';
+      luz.style.setProperty('--x', x);
+      luz.style.setProperty('--y', y);
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      const x = touch.clientX + 'px';
+      const y = touch.clientY + 'px';
+      luz.style.setProperty('--x', x);
+      luz.style.setProperty('--y', y);
+    });
+  </script>
+</body>
+</html>
+
+
